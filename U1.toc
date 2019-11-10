@@ -1,8 +1,33 @@
 \contentsline {section}{\numberline {1}Intro}{3}% 
-\contentsline {section}{\numberline {2}Limits}{4}% 
-\contentsline {subsection}{\numberline {2.1}Ideas about limits}{4}% 
-\contentsline {subsection}{\numberline {2.2}Finding Limits}{4}% 
-\contentsline {subsection}{\numberline {2.3}Asymtotes}{6}% 
-\contentsline {subsection}{\numberline {2.4}Limit Laws}{7}% 
-\contentsline {subsection}{\numberline {2.5}Limit Calculations}{7}% 
-\contentsline {subsubsection}{\numberline {2.5.1}Direct Substitution Property}{8}% 
+\contentsline {subsection}{\numberline {1.1}Ideas about Sets}{3}% 
+\contentsline {subsection}{\numberline {1.2}Sets We Use Frequently}{3}% 
+\contentsline {subsection}{\numberline {1.3}More definitions}{3}% 
+\contentsline {subsection}{\numberline {1.4}Properties of Reals}{4}% 
+\contentsline {subsection}{\numberline {1.5}The Least Upper Bound Property}{4}% 
+\contentsline {subsubsection}{\numberline {1.5.1}Least Upper Bound and $\mathbb {Q}$}{5}% 
+\contentsline {subsection}{\numberline {1.6}Proof by Contradiction}{5}% 
+\contentsline {subsection}{\numberline {1.7}Open and Closed Intervals}{6}% 
+\contentsline {subsection}{\numberline {1.8}Function Definitions}{6}% 
+\contentsline {subsubsection}{\numberline {1.8.1}Graphical Representation}{7}% 
+\contentsline {subsection}{\numberline {1.9}Injectivity and Surjectivity}{8}% 
+\contentsline {subsection}{\numberline {1.10}Function interactions}{9}% 
+\contentsline {subsection}{\numberline {1.11}Triangle inequality}{9}% 
+\contentsline {subsection}{\numberline {1.12}Polynomial}{9}% 
+\contentsline {subsection}{\numberline {1.13}Rational Function}{10}% 
+\contentsline {section}{\numberline {2}Limits}{10}% 
+\contentsline {subsection}{\numberline {2.1}Definition}{10}% 
+\contentsline {subsubsection}{\numberline {2.1.1}Negating statements involving quantifiers}{11}% 
+\contentsline {subsubsection}{\numberline {2.1.2}Proving limits false}{12}% 
+\contentsline {subsection}{\numberline {2.2}Limit Rules}{12}% 
+\contentsline {subsection}{\numberline {2.3}Squeeze Theorem}{16}% 
+\contentsline {subsection}{\numberline {2.4}One-sided Limits}{17}% 
+\contentsline {subsection}{\numberline {2.5}Limits at Infinity}{18}% 
+\contentsline {subsection}{\numberline {2.6}Infinite Limits}{19}% 
+\contentsline {subsection}{\numberline {2.7}Existance of Limits}{20}% 
+\contentsline {subsubsection}{\numberline {2.7.1}Use of product rule}{20}% 
+\contentsline {subsection}{\numberline {2.8}Asymtotes}{20}% 
+\contentsline {subsection}{\numberline {2.9}Limit dependency on Power of Polynomial}{22}% 
+\contentsline {subsection}{\numberline {2.10}Limit Laws}{25}% 
+\contentsline {subsection}{\numberline {2.11}Limit Calculations}{26}% 
+\contentsline {subsubsection}{\numberline {2.11.1}Direct Substitution Property}{26}% 
+\contentsline {section}{\numberline {3}Continuity}{27}% 
