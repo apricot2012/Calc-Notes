@@ -1219,6 +1219,8 @@ By evaluation, $\lim_{h\rightarrow 0} h+6 = 6$
 
 \section{Continuity}
 
+\subsection{Definitions}
+
 \redbox{
     Let $f$ be a function, and let $a \in \mathbb{R}$. We say that $f$ is continuous at $a$, if
     $$\lim_{x\rightarrow a} f(x) = f(a)$$
@@ -1275,7 +1277,7 @@ If $f(c) \neq 0$, then there exists $\delta >0$, so that $f(x)$ is defined, and 
 
 Ex. \[
 f(x)= \begin{cases}
-    1 \text{ , if } x\in \mathbb{Q}\\
+    1+x \text{ , if } x\in \mathbb{Q}\\
     x \text{ , if } x\notin \mathbb{Q}\\
 \end{cases}
 \]
@@ -1286,6 +1288,99 @@ Since $f$ is continuous at $c$, $\lim_{x\rightarrow c} f(x) = f(c) \neq 0$.
 
 Choose $\epsilon = \frac{|f(c)|}{2}$\\
 
-Then, there exists $\delta > 0$, so that for every $x\in \mathbb{R}$ with $0< |x-c| <\delta$, $f(x)$ exists and $|f(x) - f(c)| < \epsilon$.
+Then, there exists $\delta > 0$, so that for every $x\in \mathbb{R}$ with $0< |x-c| <\delta$, $f(x)$ exists and $|f(x) - f(c)| < \epsilon = |f(c)|/2$.
+
+Thus $|f(x)| > \epsilon = |f(c)|/2$. In particular, $f(x) \neq 0$.\\
+
+Similar to this lemma we can also prove that \begin{enumerate}
+  \item If $f(c) > 0$, then there exists $\delta > 0$ so that $f(x) > 0$ for all $x \in (c-\delta, c + \delta)$.
+  \item If $f(c) < 0$, then there exists $\delta < 0$ so that $f(x) > 0$ for all $x \in (c-\delta, c + \delta)$.
+\end{enumerate}
+
+\subsection{Bolzano's Theorem}
+\redbox
+{
+   Let $f$ be continuous on the closed interval $[a,b]$. Suppose that $f(a)$ and $f(b)$ have opposite signs:\\
+   i.e. $f(a) > 0$ \& $f(b) < 0$\\
+   \hspace*{5mm} $f(a) < 0$ \& $f(b) > 0$\\
+
+   Then there exists $c \in (a,b)$ that $f(c) = 0$.
+}
+
+\textit{Proof:} Without the loss of generality, suppose $f(a) < 0$ and $f(b) > 0$. (The opposite case has similar proofs).
+
+Define $ S = \{ x \in [a,b]: f(x) \leq 0\}$
+
+First $S$ is not empty: since $f(a) < 0$, $a \in S$.
+
+Second, $S$ is bounded above since $x \leq b$ for all $x \in S$.
+
+Then $S$ has a least upper bound (\textit{or supremum}) called $c$. We know either $f(c) > 0$, $f(c) = 0$, or $f(c) < 0$.\\
+
+Suppose $f(c) > 0$. By lemma 1-1, there exists $\delta > 0$ so that $f(x) > 0$ for all $x \in (c - \delta, c+ \delta)$. In particular, $f(x) > 0$  for all $x \in [c - \delta/2, c]$.
+
+We can show that $c - \delta/2$ is an upper bound for $S$. Let $x \in S$. Since $c$ is an upper bound for $S$, we have $x \leq c$.
+
+Next, since $f(x) > 0$ for all $x \in [c-\delta/2,c]$. If $x \in S$, we have $x \notin [c-\delta/2,c]$.
+
+Hence if $x \in S$, $x \leq c - \delta/2$, so $x \leq c-\delta/2$. Then $c-\delta/2$ is an upper bound.
+
+But this contradicts the fact that $c$ is the least upper bound.\\
+
+Suppose $f(c) < 0$. Then by lemma 1-2, there exists $\delta > 0$ so that $f(x) < 0$ for all $x \in (c-\delta, c+\delta)$. In particular, $f(c+\delta/2) < 0$. So $c + \delta/2 \in S$.
+
+But this contradicts the fact that $c$ is an upper bound for $S$.\\
+
+Thus we conclude $f(c)  = 0$.
+
+\subsection{Intermediate Value Theorem}
+
+\redbox
+{
+  Let $f: [a,b] \rightarrow \mathbb{R}$ be continuous. \begin{itemize}
+    \item If $f(a) < f(b)$, then for every $y \in (f(a), f(b))$, there exists $x \in (a,b)$ so that $f(x) = y$.
+    \item If $f(a) > f(b)$, then for every $y \in (f(b), f(a))$, there exists $x \in (a,b)$ so that $f(x) = y$.
+  \end{itemize}
+}
+
+\bigskip
+
+\textit{Proof:} Define $g(x)  = f(x) - y$.
+
+Then $g$ is continuous on $[a,b]$, and $g(a)$ and $g(b)$ have opposite signs.
+
+By Bolzano's theorem, there exists $c \in (a,b)$ so $g(c) = 0$. Here $f(c) = y$.
+
+\subsection{Extreme Value Theorem}
+
+\redbox
+{
+  Let $f: [a,b] \rightarrow \mathbb{R}$ be continuous.
+
+  Then there exists numbers $c, d \in [a,b]$ so that \begin{itemize}
+    \item $f(x) \leq f(c)$ for all $x \in [a,b]$
+    \item $f(x) \geq f(d)$ for all $x \in [a,b]$
+  \end{itemize}
+}
+
+\begin{center}
+\begin{figure}[h!]
+  \centering
+  \begin{tikzpicture}[scale = 1.0]
+  \begin{axis}[grid=both,ymin=-5,ymax=5,xmax=10,xmin=-10,xticklabel=\empty,yticklabel=\empty,
+                 minor tick num=1,axis lines = middle,xlabel=$x$,ylabel=$y$,label style =
+                 {at={(ticklabel cs:1.1)}}]
+  \addplot[domain = -10:10, samples = 3001, color = black]
+  {sin(deg(\x))};
+  \node [below] at (axis cs: 1.57, 0) {$c$};
+  \node [above] at (axis cs: -1.57, 0) {$d$};
+  \node at (axis cs: 1.57, 0)[circle,fill,inner sep=1.5pt]{};
+  \node at (axis cs: -1.57, 0)[circle,fill,inner sep=1.5pt]{};
+  \end{axis}
+  \end{tikzpicture}
+\end{figure}
+\end{center}
+
+
 
 \end{document}
